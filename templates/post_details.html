@@ -1,0 +1,225 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="CV & Resume Template" />
+	<meta name="keywords" content="vcard, resposnive, resume, personal, card, cv, cvio, portfolio" />
+	<meta name="author" content="beshleyua" />
+
+	<!-- Title -->
+	<title>Kamran Syed - Works</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/basic.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jarallax.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/brands.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/solid.css') }}" />
+
+
+	<!-- Theme Colors
+	<link rel="stylesheet" href="css/theme-colors/blue.css" />
+	<link rel="stylesheet" href="css/theme-colors/green.css" /> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/theme-colors/orange.css') }}" />
+	<!-- <link rel="stylesheet" href="css/theme-colors/brown.css" />
+	<link rel="stylesheet" href="css/theme-colors/purple.css" />
+	<link rel="stylesheet" href="css/theme-colors/red.css" />
+	<link rel="stylesheet" href="css/theme-colors/beige.css" />
+	<link rel="stylesheet" href="css/theme-colors/green_light.css" />
+	<link rel="stylesheet" href="css/theme-colors/yellow.css" />
+	<link rel="stylesheet" href="css/theme-colors/yellow_light.css" />
+	 -->
+		
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Cursor -->
+		<div class="cursor-follower"></div>
+	
+		<!-- Header -->
+		<header class="header">
+			<div class="head-top">
+
+				<!-- menu button -->
+				<a href="#" class="menu-btn"><span></span></a>
+
+				<!-- logo -->
+				<div class="logo hover-masks-logo">
+					<a href="#">
+						<span class="mask-lnk"><strong>Kamran Syed</strong></span>
+						<span class="mask-lnk mask-lnk-hover">Download <strong>CV</strong></span>
+					</a>
+				</div>
+				
+				<!-- top menu -->						
+				<div class="top-menu hover-masks">
+					<div class="top-menu-nav">	
+						<div class="menu-topmenu-container">
+							<ul class="menu">
+								<li class="menu-item current-menu-item">
+									<a href="/">Home</a>
+								</li>
+								<li class="menu-item">
+									<a href="/resume">Resume</a>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="works_creative.html">Works</a>
+									<ul class="sub-menu">
+										<li class="menu-item"><a href="/work">Works Creative</a></li>
+										<li class="menu-item"><a href="work_single_creative.html">Work Single Creative</a></li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a href="/blog">Blogs</a>
+								</li>
+								<li class="menu-item">
+									<a href="/contacts">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</header>
+		
+		<!-- Wrapper -->
+		<div class="wrapper">	
+
+			
+
+			<!-- Works -->
+			<div class="section works" id="section-portfolio">
+                <div class="content">
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="card">
+                                    <div class="card-body">
+                                        {% if post.post_image %}
+                                        <img src="{{ url_for('image', post_id=post.id) }}" class="img-fluid rounded" style="max-width: 400px; max-height: 300px;" alt="{{ post.post_title }}">
+                                        {% else %}
+                                            <div class="text-center">
+                                                <p class="text-muted">No Image Available</p>
+                                            </div>
+                                        {% endif %}
+                                        <h5 class="card-title" style="color: white;" >{{ post.post_title }}</h5>
+                                        <p class="card-text">{{ post.post_content|safe }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+		
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="copy">
+				{% for entry in entries_form %}
+				<p>E: {{entry.email}}</p>
+				<p>T: {{entry.phone}}</p>
+				{% endfor %}
+			</div>
+			<div class="soc-box">
+				<div class="follow-label">Follow Me</div>
+				<div class="soc" style="margin-bottom: 60px;">
+					<a target="_blank" href="https://www.instagram.com/kamran_syed141">
+					  <span class="icon fab fa-instagram"></span>
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/in/kamran-ahmad-saeed-93208323b">
+					  <span class="icon fab fa-linkedin"></span>
+					</a>
+					<a target="_blank" href="https://www.facebook.com/kamran.shah.77715869">
+					  <span class="icon fab fa-facebook"></span>
+					</a>
+					<a href="https://www.tiktok.com/@kamransyed141001" target="_blank" rel="noopener noreferrer">
+					  <svg xmlns="http://www.w3.org/2000/svg" height="20" width="16" viewBox="0 0 448 512">
+						<path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1" fill="#bbb"/>
+					  </svg>
+					</a>
+				  </div>
+			  </div>
+			  
+			<div class="clear"></div>
+		</footer>
+
+		<!-- Lines -->
+		<div class="lines">
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+		</div>
+		
+	</div>
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/6579501970c9f2407f7f56c9/1hhgu1pjf';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+
+	<!-- Scripts -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.validate.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/simpleParallax.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/typed.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jarallax.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jarallax-video.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jarallax-element.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/grained.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+</body>
+</html>

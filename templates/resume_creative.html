@@ -1,0 +1,840 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+
+	<!-- Meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="CV & Resume Template" />
+	<meta name="keywords" content="vcard, resposnive, resume, personal, card, cv, cvio, portfolio" />
+	<meta name="author" content="beshleyua" />
+
+	<!-- Title -->
+	<title>Kamran Syed - Resume</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="static/css/basic.css" />
+	<link rel="stylesheet" href="static/css/layout.css" />
+	<link rel="stylesheet" href="static/css/magnific-popup.css" />
+	<link rel="stylesheet" href="static/css/animate.css" />
+	<link rel="stylesheet" href="static/css/jarallax.css" />
+	<link rel="stylesheet" href="static/css/swiper.css" />
+	<link rel="stylesheet" href="static/css/fontawesome.css" />
+	<link rel="stylesheet" href="static/css/brands.css" />
+	<link rel="stylesheet" href="static/css/solid.css" />
+
+	<!-- Theme Colors
+	<link rel="stylesheet" href="css/theme-colors/blue.css" />
+	<link rel="stylesheet" href="css/theme-colors/green.css" /> -->
+	<link rel="stylesheet" href="static/css/theme-colors/orange.css" />
+	<!-- <link rel="stylesheet" href="css/theme-colors/brown.css" />
+	<link rel="stylesheet" href="css/theme-colors/purple.css" />
+	<link rel="stylesheet" href="css/theme-colors/red.css" />
+	<link rel="stylesheet" href="css/theme-colors/beige.css" />
+	<link rel="stylesheet" href="css/theme-colors/green_light.css" />
+	<link rel="stylesheet" href="css/theme-colors/yellow.css" />
+	<link rel="stylesheet" href="css/theme-colors/yellow_light.css" /> -->
+	
+		
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-HL7N4soTLcq1U+KeekAa/+uDGjd9M8K8tFZ4IZWctAkP37zP6a//BNCmBlcKbftPI/BXZ2V0e8/xJ+8DK2tJcQ==" crossorigin="anonymous" />
+
+
+	<link rel="shortcut icon" href="static/images/favicon.png">
+
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Container -->
+	<div class="container">
+
+		<!-- Cursor -->
+		<div class="cursor-follower"></div>
+	
+		<!-- Header -->
+		<header class="header">
+			<div class="head-top">
+
+				<!-- menu button -->
+				<a href="#" class="menu-btn"><span></span></a>
+
+				<!-- logo -->
+				<div class="logo hover-masks-logo">
+					<a href="#">
+						<span class="mask-lnk"><strong>Kamran Syed</strong></span>
+						<span class="mask-lnk mask-lnk-hover">Download <strong>CV</strong></span>
+					</a>
+				</div>
+				
+				<!-- top menu -->						
+				<div class="top-menu hover-masks">
+					<div class="top-menu-nav">	
+						<div class="menu-topmenu-container">
+							<ul class="menu">
+								<li class="menu-item current-menu-item">
+									<a href="/">Home</a>
+								</li>
+								<li class="menu-item">
+									<a href="/resume">Resume</a>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="works_creative.html">Works</a>
+									<ul class="sub-menu">
+										<li class="menu-item"><a href="/work">Works Creative</a></li>
+										<li class="menu-item"><a href="work_single_creative.html">Work Single Creative</a></li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a href="/blog">Blogs</a>
+								</li>
+								<li class="menu-item">
+									<a href="/contacts">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</header>
+		
+		<!-- Wrapper -->
+		<div class="wrapper">
+
+			<!-- Section Started -->
+			<div class="section started layout-creative" id="section-started">
+
+				<!-- background -->
+				<div class="video-bg">
+					<div class="video-bg-mask"></div>
+					<div class="video-bg-texture" id="grained_container"></div>
+				</div>
+
+				<!-- started content -->
+				<div class="centrize full-width">
+					<div class="vertical-center">
+						<div class="started-content">
+							<h1 class="h-title">Resume</h1>
+							<div class="h-subtitles">
+								<div class="h-subtitle typing-bread">
+									<p class="breadcrumbs">
+										<a href="/">Home</a> / Resume
+									</p>
+								</div>
+								<span class="typed-bread"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- mosue button -->
+				<a href="#" class="mouse_btn" style="display: none;"><span class="icon fas fa-chevron-down"></span></a>
+
+			</div>
+
+			<!-- Section About -->
+			<div class="section about" id="section-about">
+				<div class="content content-box">
+
+					<!-- image -->
+					<div class="image">
+						<img src="static/images/kamran.png" alt="" />
+					</div>
+
+					<!-- desc -->
+					<div class="desc">
+						<p>{% for entry in entries %}{{ entry.intro_text }}{% endfor %}</p>
+						<div class="info-list">
+							<ul>
+								<li><strong>Age:</strong> {% for entry in entries_info %}{{ entry.age }}{% endfor %}</li>
+								<li><strong>Residence:</strong> {% for entry in entries_info %}{{ entry.residence }}{% endfor %}</li>
+								<li><strong>Freelance:</strong> {% for entry in entries_info %}{{ entry.freelance }}{% endfor %}</li>
+								<li><strong>Address:</strong> {% for entry in entries_info %}{{ entry.address }}{% endfor %}</li>
+								<li><strong>Phone:</strong> {% for entry in entries_info %}{{ entry.phone }}{% endfor %}</li>
+								<li><strong>E-mail:</strong> {% for entry in entries_info %}{{ entry.email }}{% endfor %}</li>
+							</ul>
+						</div>
+						<div class="bts">
+							<a href="#" class="btn hover-animated">
+								<span class="circle"></span>
+								<span class="lnk">Download CV</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!-- Section Service -->
+			<div class="section service" id="section-services">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Services</div>
+					</div>
+
+					<!-- service items -->
+					<div class="service-items">
+
+						{% for entry in entries %}
+
+						<div class="service-col">
+							<div class="service-item content-box">
+								<div class="icon"><span class="fas fa-code"></span></div>
+								<div class="name">{{ entry.service_name }}</div>
+								<div class="text">{{ entry.service_description }}</div>
+							</div>
+						</div>
+
+						{% endfor %}
+						
+						
+
+					</div>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!-- Section Pricing -->
+			<div class="section pricing" id="section-pricing">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Pricing Table</div>
+					</div>
+
+					<!-- pricing items -->
+					<div class="pricing-items">
+
+						<div class="pricing-col">
+							<div class="pricing-item content-box">
+								<div class="icon">
+									<span class="fas fa-star"></span>
+								</div>
+								<div class="name">Basic</div>
+								<div class="amount">
+									<span class="number">
+										<span class="dollar">$</span>
+										<span>39</span>
+										<span class="period">hour</span>
+									</span>
+								</div>
+								<div class="feature-list">
+									<ul>
+										<li>Web Development</li>
+										<li>Advetising</li>
+										<li>Game Development</li>
+										<li class="disable">Music Writing</li>
+										<li class="disable">Photography</li>
+									</ul>
+								</div>
+								<div class="bts">
+									<a href="#" class="btn hover-animated">
+										<span class="circle"></span>
+										<span class="lnk">Buy Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="pricing-col">
+							<div class="pricing-item content-box">
+								<div class="icon">
+									<span class="fas fa-rocket"></span>
+								</div>
+								<div class="name">Premium</div>
+								<div class="amount">
+									<span class="number">
+										<span class="dollar">$</span>
+										<span>59</span>
+										<span class="period">hour</span>
+									</span>
+								</div>
+								<div class="feature-list">
+									<ul>
+										<li>Web Development</li>
+										<li>Advetising</li>
+										<li>Game Development</li>
+										<li>Music Writing</li>
+										<li>Photography <strong>new</strong></li>
+									</ul>
+								</div>
+								<div class="bts">
+									<a href="#" class="btn hover-animated">
+										<span class="circle"></span>
+										<span class="lnk">Buy Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Section Resume -->
+			<div class="section resume" id="section-history">
+				<div class="content">
+					<div class="cols">
+
+						<div class="col col-md">
+
+							<!-- title -->
+							<div class="title">
+								<div class="title_inner">Experience</div>
+							</div>
+							
+							<!-- resume items -->
+							<div class="resume-items">
+								
+								<div class="resume-item content-box active">
+									<div class="date">Feb 2023 - Present</div>
+									<div class="name">Lead Web Developer - Digi-inn</div>
+									<div class="text">Collaborate with creative and development teams on the execution of ideas.</div>
+								</div>
+
+								<div class="resume-item content-box active">
+									<div class="date">May 2023 - Present</div>
+									<div class="name">Web Developer (Remote) - SEODF</div>
+									<div class="text">Monitored technical aspects of the front-end delivery for projects.</div>
+								</div>
+
+								<div class="resume-item content-box">
+									<div class="date">May 2022 - Feb 2023</div>
+									<div class="name">Junior Wordpress Developer - Digi-inn</div>
+									<div class="text">Customise wordpress websites using Light weight plugins and themes.</div>
+								</div>
+
+							</div>
+
+						</div>
+						
+						<div class="col col-md">
+
+							<!-- title -->
+							<div class="title">
+								<div class="title_inner">Education</div>
+							</div>
+							
+							<!-- resume items -->
+							<div class="resume-items">
+
+								<div class="resume-item content-box">
+									<div class="date">2016 - 2018</div>
+									<div class="name">Alhamd Islamic - Islamabad</div>
+									<div class="text">Bachelors Degree in Computer Science From Alhamd Islamic University Islamabad Pakistan.</div>
+								</div>
+
+								<div class="resume-item content-box">
+									<div class="date">May 2022</div>
+									<div class="name">Web Development Course - Digi Skills</div>
+									<div class="text">Converted Photoshop layouts to web using HTML, CSS, and Bootstrap.</div>
+								</div>
+
+								<div class="resume-item content-box">
+									<div class="date">May 2022</div>
+									<div class="name">Wordpress Customization - Digi Skills</div>
+									<div class="text">Learned WordPress development, enhancing skills in site creation.</div>
+								</div>
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Section Design Skills -->
+			<div class="section skills" id="section-skills">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Design Skills</div>
+					</div>
+
+					<!-- skills items -->
+					<div class="skills percent content-box">
+						<ul>
+							<li> 
+								<div class="name">Wordpress Customization</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 90%;">
+										<span class="percent">95%</span>
+									</div>
+								</div>
+							</li>
+							<li> 
+								<div class="name">Flask Development</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 80%;">
+										<span class="percent">80%</span>
+									</div>
+								</div>
+							</li>
+							<li> 
+								<div class="name">Html, CSS, Bootstrap</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 95%;">
+										<span class="percent">95%</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="name">Web Design</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 100%;">
+										<span class="percent">100%</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="name">SEO</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 85%;">
+										<span class="percent">85%</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="name">System Deployment and Administration</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 90%;">
+										<span class="percent">90%</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="name">Hosting Management</div>
+								<div class="progress ">
+									<div class="percentage" style="width: 100%;">
+										<span class="percent">100%</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Section Languages Skills -->
+			<div class="section skills" id="section-skills-lang">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Languages Skills</div>
+					</div>
+
+					<!-- skills items -->
+					<div class="skills dotted content-box">
+						<ul>
+							<li> 
+								<div class="name">English</div>
+								<div class="progress">
+									<div class="percentage" style="width: 90%;">
+										<span class="percent">90%</span>
+									</div>
+								</div>
+							</li>
+							<li> 
+								<div class="name">Urdu</div>
+								<div class="progress">
+									<div class="percentage" style="width: 100%;">
+										<span class="percent">100%</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Section Coding Skills -->
+			<div class="section skills" id="section-skills-code">
+				<div class="content">
+					
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Coding Skills</div>
+					</div>
+
+					<!-- skills items -->
+					<div class="skills circles content-box">
+						<ul>
+							{% for skill in skills %}
+							<li> 
+								<div class="name">{{ skill.skill_name }}</div>
+								<div class="progress p90"> <!-- p90 = 90% circle fill color -->
+									<div class="percentage">
+										<span class="percent">{{ skill.percentage }}%</span>
+									</div>
+									<span>{{ skill.percentage }}%</span>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Section Knowladge Skills -->
+			<div class="section skills" id="section-skills-know">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Knowledge</div>
+					</div>
+
+					<!-- skills -->
+					<div class="skills list content-box">
+						<ul>
+							{% for knowledge in knowledge_data %}
+							<li> 
+								<div class="name">{{ knowledge.knowledge_name }}</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Section Interests -->
+			<div class="section service" id="section-interests">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Interests</div>
+					</div>
+
+					<!-- interests items -->
+					<div class="service-items">
+
+						<div class="service-col">
+							<div class="service-item content-box">
+								<div class="icon"><span class="fas fa-globe"></span></div>
+								<div class="name">Travelling</div>
+								<div class="text">Exploring diverse cultures and landscapes, seeking adventure and new experiences.</div>
+							</div>
+						</div>
+
+						<div class="service-col">
+							<div class="service-item content-box">
+								<div class="icon"><span class="fas fa-campground"></span></div>
+								<div class="name">Camping</div>
+								<div class="text">Embracing nature's tranquility, camping under the stars, and creating lasting memories.</div>
+							</div>
+						</div>
+
+						<div class="service-col">
+							<div class="service-item content-box">
+								<div class="icon"><span class="fas fa-book"></span></div>
+								<div class="name">Reading</div>
+								<div class="text">Diving into captivating worlds, gaining knowledge, and fostering imagination through books.</div>
+							</div>
+						</div>
+
+						<div class="service-col">
+							<div class="service-item content-box">
+								<div class="icon"><span class="fas fa-headphones"></span></div>
+								<div class="name">Music</div>
+								<div class="text">Immersing in melodies, finding solace and inspiration in diverse musical genres.</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!-- Section Team -->
+			<div class="section team" id="section-team">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Our Team</div>
+					</div>
+
+					<!-- team items -->
+					<div class="team-items">
+
+						<div class="team-col">
+							<div class="team-item content-box">
+								<div class="image">
+									<img src="static/images/man-removebg-preview.png" alt="" />
+								</div>
+								<div class="desc">
+									<div class="name">Kamran Syed</div>
+									<div class="category">Full Stack Developer</div>
+									<div class="soc">
+										<a target="_blank" href="https://www.facebook.com/">
+											<span class="icon fab fa-facebook"></span>
+										</a>
+										<a target="_blank" href="https://www.instagram.com/">
+											<span class="icon fab fa-instagram"></span>
+										</a>
+										<a target="_blank" href="https://www.tiktok.com/">
+											<span class="icon fab fa-tiktok"></span>
+										</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="team-col">
+							<div class="team-item content-box">
+								<div class="image">
+									<img src="static/images/team2.jpg" alt="" />
+								</div>
+								<div class="desc">
+									<div class="name">Resha Malik</div>
+									<div class="category">Back-end Developer</div>
+									<div class="soc">
+										<a target="_blank" href="https://www.pinterest.com/">
+											<span class="icon fab fa-pinterest"></span>
+										</a>
+										<a target="_blank" href="https://www.instagram.com/">
+											<span class="icon fab fa-instagram"></span>
+										</a>
+										<a target="_blank" href="https://dribbble.com/">
+											<span class="icon fab fa-dribbble"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+
+			<!-- Section Testimonials -->
+			<div class="section testimonials" id="section-testimonials">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Testimonials</div>
+					</div>
+
+					<!-- testimonials items -->
+					<div class="reviews-carousel">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								{% for client in clients %}
+
+								<div class="swiper-slide">
+									<div class="reviews-item content-box">
+										<div class="info">
+											<div class="name">{{ client.client_name }}</div>
+											<div class="company">{{ client.client_designation }}</div>
+										</div>
+										<div class="text">
+											{{ client.client_reviews }}
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+
+							</div>
+						</div>
+
+						<!-- navigation -->
+						<div class="swiper-nav">
+							<a class="prev swiper-button-prev fas fa-long-arrow-alt-left"></a>
+							<a class="next swiper-button-next fas fa-long-arrow-alt-right"></a>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+
+			<!-- Section Clients -->
+			<div class="section clients" id="section-clients">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Clients</div>
+					</div>
+
+					<!-- clients items -->
+					<div class="content-box">
+						<div class="clients-items">
+
+							<div class="clients-col">
+								<div class="clients-item">
+									<a target="_blank" href="#">
+										<img src="static/images/client1.png" alt="" />
+									</a>
+								</div>
+							</div>
+
+							<div class="clients-col">
+								<div class="clients-item">
+									<a target="_blank" href="#">
+										<img src="static/images/client3.png" alt="" />
+									</a>
+								</div>
+							</div>
+
+							<div class="clients-col">
+								<div class="clients-item">
+									<a target="_blank" href="#">
+										<img src="static/images/client2.png" alt="" />
+									</a>
+								</div>
+							</div>
+
+							<div class="clients-col">
+								<div class="clients-item">
+									<a target="_blank" href="#">
+										<img src="static/images/client4.png" alt="" />
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<!-- Section Custom Text -->
+			<div class="section custom-text" id="section-custom-text">
+				<div class="content">
+
+					<!-- title -->
+					<div class="title">
+						<div class="title_inner">Digital Developer</div>
+					</div>
+
+					<!-- clients items -->
+					<div class="content-box">
+						<div class="single-post-text">
+							<p>
+								Dedicated web developer with expertise in SEO, software development, Flask, and WordPress. Committed to creating impactful online experiences. Fluent in the language of code, adept at crafting dynamic websites that stand out. Proficient in SEO strategies for optimal visibility. Specialized in Flask and WordPress development, ensuring user-friendly and efficient platforms. Passionate about the seamless fusion of design and functionality to deliver exceptional digital solutions.
+							</p>
+							
+						</div>
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="copy">
+				{% for entry in entries_form %}
+				<p>E: {{entry.email}}</p>
+				<p>T: {{entry.phone}}</p>
+				{% endfor %}
+			</div>
+			<div class="soc-box">
+				<div class="follow-label">Follow Me</div>
+				<div class="soc" style="margin-bottom: 60px;">
+					<a target="_blank" href="https://www.instagram.com/kamran_syed141">
+					  <span class="icon fab fa-instagram"></span>
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/in/kamran-ahmad-saeed-93208323b">
+					  <span class="icon fab fa-linkedin"></span>
+					</a>
+					<a target="_blank" href="https://www.facebook.com/kamran.shah.77715869">
+					  <span class="icon fab fa-facebook"></span>
+					</a>
+					<a href="https://www.tiktok.com/@kamransyed141001" target="_blank" rel="noopener noreferrer">
+					  <svg xmlns="http://www.w3.org/2000/svg" height="20" width="16" viewBox="0 0 448 512">
+						<path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1" fill="#bbb"/>
+					  </svg>
+					</a>
+				  </div>
+			  </div>
+			  
+			<div class="clear"></div>
+		</footer>
+
+		<!-- Lines -->
+		<div class="lines">
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+			<div class="line-col"></div>
+		</div>
+		
+	</div>
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/6579501970c9f2407f7f56c9/1hhgu1pjf';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+
+	<!-- Scripts -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/jquery.validate.js"></script>
+	<script src="static/js/magnific-popup.js"></script>
+	<script src="static/js/simpleParallax.js"></script>
+	<script src="static/js/typed.js"></script>
+	<script src="static/js/jarallax.js"></script>
+	<script src="static/js/jarallax-video.js"></script>
+	<script src="static/js/jarallax-element.js"></script>
+	<script src="static/js/imagesloaded.pkgd.js"></script>
+	<script src="static/js/isotope.pkgd.js"></script>
+	<script src="static/js/swiper.js"></script>
+	<script src="static/js/grained.js"></script>
+	<script src="static/js/scripts.js"></script>
+
+</body>
+</html>
